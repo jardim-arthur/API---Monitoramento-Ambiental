@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento Ambiental</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Monitoramento Ambiental</h1>
+        <p>Acompanhe as condições meteorológicas</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Temperatura</h3>
+                <p id="temperatura">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Umidade</h3>
+                <p id="umidade">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Sensação térmica</h3>
+                <p id="sensacao">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Pressão atmosférica</h3>
+                <p id="pressao">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Velocidade do vento</h3>
+                <p id="vento">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Visibilidade</h3>
+                <p id="visibilidade">--</p>
+            </div>
+
+        </section>
+
+        <section class="tabela-container">
+
+            <h2>Previsão por horário</h2>
+
+            <div class="tabela-scroll">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Temperatura</th>
+                            <th>Umidade</th>
+                            <th>Chuva</th>
+                            <th>Probabilidade de chuva</th>
+                            <th>Pressão</th>
+                            <th>Vento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaPrevisao">
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Monitoramento Ambiental | Dados meteorológicos Open-Meteo</p>
+    </footer>
+
+    <script type="module" src="./js/script.js"></script>
+
+</body>
+</html>
