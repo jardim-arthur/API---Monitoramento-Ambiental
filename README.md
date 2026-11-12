@@ -1,0 +1,138 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:064E3B,50:10B981,100:99F6E4&height=200&section=header&text=Monitoramento%20Ambiental&fontSize=42&fontColor=ffffff&fontAlignY=40&animation=fadeIn" width="100%" alt="Monitoramento Ambiental Header" />
+
+Aplicação web desenvolvida em JavaScript para consultar, organizar e apresentar informações meteorológicas utilizando a API [Open-Meteo](https://open-meteo.com/).
+
+O projeto apresenta dados ambientais em um dashboard com cartões informativos e uma tabela de previsão organizada por horário, utilizando HTML, CSS e JavaScript.
+
+## Sobre o projeto
+
+O Monitoramento Ambiental tem como objetivo facilitar a visualização de informações meteorológicas, oferecendo uma interface organizada e intuitiva.
+
+Os dados são obtidos por meio de requisições HTTP à API Open-Meteo, processados com JavaScript e apresentados diretamente na página.
+
+## Funcionalidades
+
+- Consulta de dados meteorológicos por meio de uma API externa.
+- Exibição da temperatura.
+- Exibição da umidade relativa do ar.
+- Exibição da sensação térmica.
+- Exibição da pressão atmosférica.
+- Exibição da velocidade do vento.
+- Exibição da visibilidade.
+- Apresentação de previsão meteorológica organizada por horário.
+- Interface responsiva para diferentes tamanhos de tela.
+
+## Tecnologias utilizadas
+
+<div>
+  <img src="https://skillicons.dev/icons?i=html,css,js,vscode,git,github" />
+</div>
+
+<br>
+
+- **HTML5:** estruturação dos elementos da página.
+- **CSS3:** estilização, identidade visual e responsividade.
+- **JavaScript:** manipulação do DOM e organização dos dados.
+- **Fetch API:** comunicação HTTP com serviços externos.
+- **Open-Meteo:** fornecimento das informações meteorológicas.
+
+## Estrutura do projeto
+
+```text
+MonitoramentoAmbiental/
+│
+├── script/
+│   ├── api.js
+│   └── app.js
+│
+├── index.html
+├── style.css
+└── README.md
+```
+
+### Organização dos arquivos
+
+- **index.html:** estrutura principal da aplicação e elementos utilizados para apresentar os dados.
+- **style.css:** responsável pela identidade visual, estilização dos componentes e responsividade.
+- **script/api.js:** responsável pela configuração dos parâmetros e comunicação com a API Open-Meteo.
+- **script/app.js:** responsável por receber os dados, organizar as informações e atualizar os elementos da página.
+
+## API utilizada
+
+O projeto utiliza a API Open-Meteo para consultar informações meteorológicas.
+
+Documentação oficial: https://open-meteo.com/en/docs
+
+Entre as variáveis consultadas estão:
+
+- `temperature_2m`: temperatura a 2 metros de altura.
+- `relative_humidity_2m`: umidade relativa do ar.
+- `apparent_temperature`: sensação térmica.
+- `precipitation_probability`: probabilidade de precipitação.
+- `dew_point_2m`: ponto de orvalho.
+- `precipitation`: precipitação total.
+- `rain`: quantidade de chuva.
+- `pressure_msl`: pressão atmosférica ao nível do mar.
+- `visibility`: visibilidade.
+- `wind_speed_10m`: velocidade do vento.
+- `wind_direction_10m`: direção do vento.
+- `wind_gusts_10m`: rajadas de vento.
+
+A consulta utiliza o parâmetro `hourly`, que determina que as informações sejam organizadas em intervalos horários.
+
+As unidades de medida são fornecidas pela própria API por meio de `hourly_units`.
+
+## Como executar o projeto
+
+### Pré-requisitos
+
+- Visual Studio Code ou outro editor de código.
+- Navegador atualizado.
+- Extensão Live Server no Visual Studio Code.
+
+### Executando localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/jardim-arthur/API---Monitoramento-Ambiental.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd api-front-tempo
+```
+
+3. Abra a pasta no Visual Studio Code.
+
+4. Execute o arquivo `index.html` utilizando a extensão Live Server.
+
+5. Acesse a aplicação pelo navegador.
+
+Não é necessário instalar dependências adicionais para executar o projeto.
+
+## Funcionamento
+
+A aplicação utiliza JavaScript assíncrono para realizar a comunicação com a API.
+
+O processo ocorre em três etapas:
+
+1. **Consulta:** o arquivo `api.js` configura os parâmetros e realiza a requisição utilizando `fetch()`.
+2. **Processamento:** o arquivo `app.js` recebe a resposta, interpreta os dados e organiza as informações por horário.
+3. **Exibição:** os valores são inseridos dinamicamente nos elementos HTML, permitindo a visualização no dashboard.
+
+## Observações
+
+Os dados apresentados são informações meteorológicas fornecidas pela Open-Meteo, baseadas em modelos de previsão. Portanto, não representam necessariamente medições realizadas por sensores físicos no local.
+
+## Autor
+
+Desenvolvido como projeto de estudo para praticar integração com APIs, JavaScript assíncrono, manipulação do DOM e desenvolvimento de interfaces web.
+
+## Licença
+
+Este projeto possui finalidade educacional.
+
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:99F6E4,50:10B981,100:064E3B&height=120&section=footer" width="100%" alt="Footer Monitoramento Ambiental" />
